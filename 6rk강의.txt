@@ -1,0 +1,153 @@
+
+#6.3 
+스크립트는 항상 body 마지막에있어야해 
+스크립트가있어야 아이콘이 작동함
+
+아이콘 추가 방법 2가지종류
+- 직접 이미지 아이콘 추가
+- SVG
+
+#6.5
+폰트 찾을때 google fonts 
+
+좋음
+
+ margin: 0px 5px;
+
+위아래 0  좌우 5 주는것임
+
+CSS를 이용해 상태 바 스타일 적용
+시계를 정 가운데에 놓는 방법 
+(display : flex , justify-content : center 적용 > 하위 자식들에게 width : 33% 적용 
+> 가운데 위치하고 싶은 요소에 display : flex, justify-content : center 적용)
+
+.status-bar__column .fa-battery-full {
+  margin: 0px 5px;
+
+이렇게 .부모 .자식 하든  .자식 만 하든 둘다 적용되는데 
+읽기 더 편해서 이렇게 하는 것 같은 나중에 찾기도 좋고 해서 ? 그런듯 
+어째듯 둘다 잘 작동돼 
+
+그담  Fontawesome 에서 아이콘을 크게 만드는 class 있음 
+ <i class="fas fa-bolt"></i>
+
+여기에서 bolt 뒤에 스페이스하고 fa-2x    
+gk하면 크기 가 2x 됌 기존보다 2배 되는거지 그리고 홈페이지 나와있는데로 크기 설정가능
+3배는 3x  
+   <i class="fas fa-bolt fa-2x"></i> 이런식으로 
+
+#6.6
+
+리셋 css  마진 보덜 포딩 전부 -0부터 시작 브라우저 기본설정이아니라
+
+  text-align: center; 
+글자나열할때 사용할수 있음 중간 놓기 
+display:flex 대신에 
+
+.welcome-header__text {
+  width: 60%;
+}  아   글이 일자로 너무 길때  적당히 짤라서 아랫줄로내려가게하는게
+이거구낭 
+
+.welcome-header {
+  margin-top: 90px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+이과정 꼭 이해해야함 왜 display flex에
+flex- direction: clumn 을썻는지 
+
+
+#6.7
+
+#login-form input:focus {
+  border-color: var(--yellow);
+} 이구문 기억
+
+
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}이것도 
+여기서  :: 왜 두개인지 알아내 
+
+#6.8 
+-------------------------------
+not은 이놈만 빼고 아래것을 다적용시킨다라는뜻 
+
+
+#login-form input:not([type="submit"]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease-in-out;
+
+즉   아래 코드를 submit 에 적용 안시키겠다가 아니라 
+
+submit에만 적용 안시키겠다 
+즉 나머지는 아래 사항을 다 적용 시키겠다는 뜻 
+
+구별 확실히하기 !! 
+
+----------------------------
+#login-form input[type="submit"] {
+  background-color: var(--yellow);
+}
+
+이거할때   input [type="submit"] 할때 띄어쓰기 input과 괄호사이에 띄어쓰기
+햇는데 적용 안되더라 조심하기 
+
+--------------------------
+
+새로운것 
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+
+inherit 상속 이건 부모의 색깔을 상속받는 다는 뜻임 
+디폴트 색상 검은색이니 검은색 받음 
+
+---------------------------------------
+#login-form input[type="submit"] {
+  background-color: var(--yellow);
+  cursor: pointer;
+}
+
+콜솔 포인터 는 거기다 마우스 위치시켰을때 포인터가 바뀜 
+
+cursor: progress    커서가 진행중표시가뜸
+cursor: not-allowed; 도있음 요건 커서가 거기위로갈시 못눌르게하는 표시커서됌
+
+
+#6.9
+
+
+
+#login-form input:not([type="submit"]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease-in-out;
+
+이걸 id 말고 클래스로했으면 
+.login-form__input 요렇게 쓸수있었음 
+
+form 은 아주아주 중요한 2가지 속성을 가지고 있어
+하나는 action 이고 다른하나는 method 임 
+action :어떤 페이지로 data를 보낼 것인지 지정
+method은 두가지있음 
+post  , get 
+
+post :백엔드 서버에 정보를 전송
+get  : 은 보안에 취약해  유저네임하고 패스워드는 get방식으로 보내기 x
+       url 에 포함되어도 상관없는 정보들을 get 방식으로 보내는 거임
+
+
+----------------------------------
+#6.10
+
+nav>ul>li*4>a
+
+요렇게하면 한번에 생성됌  일일이 칠 필요 없이 vsc 에서 
+그이고 이렇게 생성한 직후 아무것도 눌르지말고 
+그자리에서 #누르고 탭눌르면 friends 쓰는 짜리로가고
+탭눌르면 다시 아래칸 # 눌를수있는 칸으로가고 탭눌르면 chats쓸수있는칸으로
+감 잘 사용해보삼 암것도 눌르지않고 바로 타이핑해야 적용됌
