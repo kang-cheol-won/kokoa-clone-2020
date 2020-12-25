@@ -151,3 +151,95 @@ nav>ul>li*4>a
 그자리에서 #누르고 탭눌르면 friends 쓰는 짜리로가고
 탭눌르면 다시 아래칸 # 눌를수있는 칸으로가고 탭눌르면 chats쓸수있는칸으로
 감 잘 사용해보삼 암것도 눌르지않고 바로 타이핑해야 적용됌
+
+-------------
+
+#6.11
+box-sizing: border-box;
+
+마법의한줄 ㅋㅋㅋ
+오전 7:21 2020-12-25
+
+
+#6.12 d
+box-sizing: border-box;
+
+원래는 padding 값을 50주고
+wideth 를 200 주면 합해서  박스 총넓이가 250이되어버림
+그래서 화면밖에 삐져나갈수도   
+고래서 
+저 코드를 치면 padding 값 신경쓰지말고 
+width 200에 맞추삼 이거임 
+
+만약 box-sizing: border-box;
+하고 패딩100 width 200 하면   
+200에 맞되   패딩은 100이되야해서  패딩100 컨텐츠공간100이되어버림 
+즉 content 보일 부분을 width 보다 초과 시키지않게함 
+저걸 안쓰면 컨텐츠 부분을 width 200 했으니 200되고 
+padding 100 하면   총 box 는 300이 되어버림 
+
+#6.13
+
+border-radius 사용할때
+사각형을 원으로 바꾸고 싶을때 
+width의 반을 값으로 쓰면 돼 
+-----------
+ display: block;
+  display: flex; 동시사용 불가능 
+
+display: block;  그냥 span 에 width  height 해도 적용 안됌 
+왜냐고 ? span 은 lnline 적 성격임 그래서 넓이와 높이가 적용안됌 
+---------------------------------------------------
+.nav__notification {
+  background-color: tomato;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+
+요거할때 position :absolute  하고  ㅣleft bottom 등을 할때 
+그냥 해버리면 body 를 기준으로 하기에 저멀리 날라간다 ㅋㅋ
+누구를 기준으로 할지 정해줘야 돼
+그래서 nav__notification 바로위 부모한테 
+position : relative 를 해주기 바라 
+
+  justify-content: center;
+  align-items: center;
+요것들은 안에 content 를 움직인다는점 참고 
+
+
+#6-14
+
+   <header class="screen-header">
+        <h1 class="screen-header__title">Friends</h1>
+        <div class="screen-header__icons">
+            <span><i class="fas fa-search fa-lg"></i></span>
+            <span><i class="fas fa-music fa-lg"></i></span>
+            <span><i class="fas fa-cog fa-lg"></i></span>
+        </div>
+    </header>
+
+여기에서 span 한테 margin 을 주고자 할때 
+
+.screen-header__icons span {
+  margin-left: 25px;
+}
+이렇게해도 되고 
+.fas {
+margin-left: 25px;
+} 이렇게 해도 돼 
+둘다 알아놯 
+
+상태바 고정할때 
+position: fixed;  하면 
+포지션에 여백이 생길때는 
+각각 전부 top left right bottem 필요한곳 0으로 하면 돼 
+
+chevron 요건 화살표를 뜻함 
