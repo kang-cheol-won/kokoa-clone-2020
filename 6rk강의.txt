@@ -243,3 +243,15 @@ position: fixed;  하면
 각각 전부 top left right bottem 필요한곳 0으로 하면 돼 
 
 chevron 요건 화살표를 뜻함 
+
+
+#6.16
+div
+위에 디브 있는 상태에서 
+.user-componet__column*2
+
+요렇게하면 
+
+ <div class="user-componet__column"></div>
+        <div class="user-componet__column"></div>
+이렇게 2개가 탄생함
