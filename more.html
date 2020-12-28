@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Friends -  kokoa clone</title>
+    <title>More -  kokoa clone</title>
 </head>
 <body>
     <div>
@@ -27,20 +27,16 @@
     
 
     <header class="screen-header">
-        <h1 class="screen-header__title">Friends</h1>
+        <h1 class="screen-header__title">More</h1>
         <div class="screen-header__icons">
             <span><i class="fas fa-search fa-lg"></i></span>
             <span><i class="fas fa-music fa-lg"></i></span>
-            <span><i class="fas fa-cog fa-lg"></i></span>
+            <span><a href="settings.html"><i class="fas fa-cog fa-lg"></i></a></span>
         </div>
     </header>
 
-    <a id="friends-display-link">
-        <i class="fas fa-info-circle"></i>
-        Friends' Names Display
-        <i class="fas fa-chevron-right fa-xs"></i>
-    </a>
-    <main class="friends-screen">
+
+    <main class="friends-screen more-screen main-screen">
         <div class="user-component">
             <div class="user-component__column">
                 <img src="수지4.gif" class="user-component__avatar user-component__avatar--xl" />
@@ -48,53 +44,74 @@
                     <h4 class="user-component__title">
                         Suzi
                     </h4>
-                  <!--  <h6 class="user-component__subtitle">this text whatever</h6>-->
+                    <h6 class="user-component__subtitle">+ 1787-432-2192 <i class="far fa-window-close"></i></h6>
                 </div>
-            </div>
-            <div class="user-component__column"></div>
-          
-        
-        </div>
-        <div class="friends-screen__channel">
-            <div class="friends-screen__channel-header">
-                <span>Channel</span>
-                <i class="fas fa-chevron-right fa-xs"></i>
-
-            </div>
-
-
-        
-            <div class="user-component">
-                <div class="user-component__column">
-                    <img src="kakaochannel.jpg" class="user-component__avatar user-component__avatar--sm" />
-                    <div class="user-component__text">
-                        <h4 class="user-component__title user-component__title--not-bold ">
-                        Channel
-                        </h4>
-                  <!--  <h6 class="user-component__subtitle">this text whatever</h6>-->
-                  
-                    </div>
-                </div>    
-                <div class="user-component__column">
-                    <div>
-                        <span>2</span>
-                        <i class="fas fa-chevron-right fa-xs"></i>
-                    </div>
-                    
+            </div>  
+            <div class="user-component__column">
+                <div class="more-lien">
+                    <i class="far fa-comment-alt fa-3x"></i>
+                    <div class="more-line__sfesific"></div>
+                    <div class="more-line__sfesific2"></div>
                 </div>
-
                 
-                  
-            
-            
-               
-            
+            </div>
           
         
-            </div>
         </div>
-    </main>
+
+        <div class="icon-row">
+            <div class="icon-row__icon">
+                <i class="far fa-calendar"></i>
+                <span>Calendar</span>
+                
+            </div>
+            <div class="icon-row__icon">
+                <i class="far fa-smile-beam"></i>
+                <span>Emoticons</span>
+            </div>
+            <div class="icon-row__icon">
+                <i class="fas fa-paint-roller"></i>
+                <span>Themes</span>
+            </div>
+            <div class="icon-row__icon">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <span>Account</span>
+            </div>
+                   
+        </div>
+
+        <div class="more-suggestions">
+            <h4 class="more-suggestions__title">Suggestions</h4>
+            <div class="more-suggestions__icon1">
+                <div class="more-suggestions__icon">
+                    <div class="more-suggestions__icon-image">
+                        <img src="kakaostory.jpg" alt="">
+                    </div>
+                    <span class="more-suggestions__icon-text">Kokoa story</span>
+                </div>
+                <div class="more-suggestions__icon">
+                    <div class="more-suggestions__icon-image">
+                        <img src="kakaofriends.jpg" alt="">
+                    </div>
+                    <span class="more-suggestions__icon-text">Kokoa frends</span>
+                </div>
+                <div class="more-suggestions__icon">
+                    <div class="more-suggestions__icon-image">
+                        <img src="kakaogem.jpg" alt="">
+                    </div>
+                    <span class="more-suggestions__icon-text">Friends Gem</span>
+                </div>
+            </div>
+            
+            
+        </div>
     
+    </main>
+
+  
+  
+
+  
 
 
     <nav class="nav">
@@ -102,7 +119,7 @@
             <li class="nav__btn">
                 <a class="nav__link" href="friends.html">
                     
-                    <i class="fas fa-user fa-2x"></i></a></li>
+                    <i class="far fa-user fa-2x"></i></a></li>
             
             <li class="nav__btn">
                 <a class="nav__link" href="chats.html">
@@ -117,12 +134,6 @@
                     <i class="fas fa-ellipsis-h fa-2x"></i></a></li>
         </ul>
     </nav>
-
-    <div id="splash-screen">
-        <i class="fas fa-comment fa-2x"></i>
-
-
-    </div>
 
 
 

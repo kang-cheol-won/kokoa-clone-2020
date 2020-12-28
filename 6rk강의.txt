@@ -255,3 +255,104 @@ div
  <div class="user-componet__column"></div>
         <div class="user-componet__column"></div>
 이렇게 2개가 탄생함
+
+
+--------------------
+#6.29
+z-index   layer 같은것  높을수록 제일 밖같에 위치 즉 제일 앞면위치 낮을수록 뒤로밀려남
+디폴트값 0
+
+아아
+<body id="chat-screen">
+
+#chat-screen .status-bar,
+#chat-screen .alt-header {
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #abc1d1;  
+
+아   chat.html 에 있는 것만 스태튜바 백그라운드 컬러 넣고 싶었는데 이렇게하는거구나 아하 
+저렇게하면 chat 스크린안에 있는 status-bar만 적용 하는거 니까  오호라 
+
+--------------
+#6.30
+
+복습시간
+어떤요소들을 고정시키면 이전 box들과는 다른 layer 가됌 
+따라서  고정된거무시하고 처음 고정안된 처음꺼 뒤로붙음
+위에꺼 다 고정시켰으면 고정안된놈이 맨위로 감
+---------
+#6.31
+
+border-radius: 15px;
+  border-top-left-radius: 0px;
+
+카톡 말풍선 처럼됌 저렇게하면
+위쪽ㅎ고 왼쪽은 둥근거 풀겠다는 뜻
+
+----------------
+#6.32
+ 순서바꾸는 두가지 바꾸는 2가지 방법
+1. 첫번째
+여기서 중요한건 order  
+낮은게  먼저옴 즉 왼쪽을기준으로  0이먼저옴    같은 틀일때 좌우 순서바꿀때좋은듯
+flex 자식에게만 적용 됌
+즉 부모가 flex 되어있고 자식에게다 코드쓰면 됌
+
+
+.message-row--own .message__time {
+  order: 0;
+}
+.message-row--own .message__bubble {
+  order: 1;
+
+2. 두번째 
+ flex-direction: row-reverse; 이거쓰면 됌 
+
+
+3개이상 뒤죽박죽 순서바꿀댄ㄴ 첫번짹 좋을 듯 
+
+-----------
+#6.33
+
+.reply__column:last-child > i    
+
+> 표시 확인 저건 자식한테 적용한다는뜻   
+
+---
+.reply__column button i  아이렇게 3중도 되는구나 그럼 4중 5중 도되겟다?
+
+하위요소 width 주기위해서는 부모요소가 width를 가져야한다 
+
+#6.34
+
+height: 100vh  화면높이의 100%
+width : 100vw 화면높이의 100%
+
+#6.35
+
+
+요약
+CSS로는 element를 페이지로부터 완전히 없앨 수는 없다.
+이유는 사라졌다가 다시 원래 상태로 돌아오기 때문
+애니메이션 마지막에 forwards를 추가하면, 애니메이션의 마지막 속성을 유지시킨다 
+하지만, 항상 존재하고 있기 때문에 화면을 덮고 있어서 클릭이 되지 않는다.
+이럴 경우엔 visibility: hidden; 을 애니메이션 마지막속성에 추가한다
+visibility: hidden = 마우스에 걸리지 않게 빠지는 옵션
+animation-delay = 애니메이션을 딜레이 시간 이후에 실행시킴.
+
+ animation: hideSplashScreen 0.7s ease-in-out forwards;요런식 
+
+
+
+
+
+----------------
+
+#6.37
+
+will-change  rlqhswj기본적으로 브라우저한테 무엇이 바뀔지 미리 이야기해줌 
+그래서 애니메이션이 훨씬 부드러워짐 (애니메이션 가속화 )  
+항상사용 하는 것은 아님 애니메이션에 문제가 보일때 그래픽카드 이용해서 애니메이션 가속화시킴 
+
