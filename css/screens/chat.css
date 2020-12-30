@@ -6,8 +6,7 @@
   background-color: #abc1d1;
   height: 500vh;
 }
-.status-bar2 {
-}
+
 #chat-screen .status-bar,
 #chat-screen .alt-header {
   position: fixed;
