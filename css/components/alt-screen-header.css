@@ -1,9 +1,9 @@
 .alt-header {
-  padding-top: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 25px;
+  padding-top: 29px;
 }
 
 .alt-header__title {
