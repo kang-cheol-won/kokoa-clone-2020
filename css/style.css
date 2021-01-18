@@ -32,6 +32,9 @@ body {
   background-color: rgb(242, 234, 221);
 }
 
+body {
+  height: 90vh;
+}
 .main-screen {
   padding: 0px 25px;
 }
