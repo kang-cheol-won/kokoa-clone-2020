@@ -2,9 +2,7 @@
   padding-right: 8px;
 }
 
-#chat-screen {
-  background-color: #abc1d1;
-  height: 500vh;
+.chat-screen {
 }
 
 #chat-screen .status-bar,
@@ -103,7 +101,7 @@
 }
 
 .reply {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   background-color: white;
